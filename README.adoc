@@ -1,0 +1,9 @@
+= A Build System for LaTeX
+
+This repo contains a set of Perl scripts for building LaTeX documents.
+
+The scripts are designed to be used with https://ctan.org/pkg/latexmk[latexmk].
+
+They are used to build documents and packages in the 
+https://github.com/src2crs[Source2Course] GitHub organization,
+as well as in my repos for programming courses.
