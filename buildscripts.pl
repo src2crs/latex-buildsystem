@@ -41,7 +41,7 @@ $buildoptions = "-interaction=nonstopmode";
 # Initialize the list of files to be built for latexmk.
 @default_files = ();
 
-# addfiles adds files to the list of files to be built.
+# addfilesfromdir adds files to the list of files to be built.
 # Expects a directory name as the first argument,
 # followed by a list of filenames.
 sub addfilesfromdir {
@@ -108,6 +108,19 @@ sub add_examples {
             die "Directory $examplesdir/$dirname does not exist.";
         }
         add_directory("$examplesdir/$dirname");
+    }
+}
+
+# add_sources expects a list of directory names below $rootdir
+# and adds all files in each directory.
+sub add_sources {
+    my @dirnames = @_;
+    for $dirname (@dirnames) {
+        # check if the directory exists and is below $rootdir
+        if (! -d "$rootdir/$dirname") {
+            die "Directory $rootdir/$dirname does not exist.";
+        }
+        add_directory("$rootdir/$dirname");
     }
 }
 
