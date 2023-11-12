@@ -7,3 +7,15 @@ The scripts are designed to be used with https://ctan.org/pkg/latexmk[latexmk].
 They are used to build documents and packages in the 
 https://github.com/src2crs[Source2Course] GitHub organization,
 as well as in my repos for programming courses.
+
+== Usage
+
+To use this build system, copy the files
+link:latexmkrc and link:buildscripts.pl into your project.
+then, adjust the settings in the latexmkrc file and run latexmk.
+
+You may also want to add any directories named `build` to the .gitignore file
+(or whatever you have changed the output directory to).
+
+The other files in this repo are for testing purposes and serve as examples,
+but they are not needed for building documents.
